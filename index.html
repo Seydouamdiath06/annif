@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux 4 mois ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1 {
+            color: #ff6699;
+            margin-top: 20px;
+        }
+        img {
+            width: 300px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .message {
+            font-size: 18px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px dashed #ff6699;
+            display: inline-block;
+            background: #fff;
+        }
+        video {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff6699;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff3366;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        /* Animation des cœurs */
+        .heart {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #ff3366;
+            clip-path: polygon(50% 0%, 61% 19%, 81% 19%, 100% 38%, 81% 81%, 50% 100%, 19% 81%, 0% 38%, 19% 19%, 39% 19%);
+            animation: fly 4s infinite ease-in-out;
+        }
+        @keyframes fly {
+            0% {
+                transform: translate(-50%, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pour nos 4 mois Mon essentielle ❤️</h1>
+    <img src="imma.jpg" alt="Photo de nous">
+    <div class="message">
+    <p style="font-size: 22px; color: #ff3366; font-weight: bold;">
+        🌸🌟 Bonjour Immaculée, 🌟🌸
+    </p>
+    <p>
+        💕 Cela fait maintenant 
+        <span style="color: #ff6699; font-size: 24px; font-weight: bold;">4 mois</span>
+        que tu illumines ma vie ! Je n'aurais jamais imaginé qu'une personne aussi exceptionnelle que toi 
+        puisse me choisir. 💖
+    </p>
+    <p style="color: #333;">
+        😘 Tu es mon <span style="color: #ff3366; font-weight: bold;">soleil</span>, 
+        ma <span style="color: #ff6699; font-weight: bold;">joie</span>, et mon 
+        <span style="color: #ff99cc; font-weight: bold;">essentielle</span>. 
+        Merci pour tout l’amour et la douceur que tu apportes. ❤️
+    </p>
+    <p>
+        🌹 Avec tout mon amour, <strong>Amdiath</strong> 🌹
+    </p>
+    <div style="text-align: center; margin-top: 10px;">
+        <img src="imma1.jpg" 
+             alt="Heart decoration" style="width: 40px; margin: 5px;">
+        <img src="imma2.jpg" 
+             alt="Couple" style="width: 40px; margin: 5px;">
+        <img src="imma3.jpg" 
+             alt="Sparkles" style="width: 40px; margin: 5px;">
+        <img src="imma1.jpg" 
+             alt="Rose" style="width: 40px; margin: 5px;">
+    </div>
+</div>
+
+    <video controls>
+        <source src="imma.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo.
+    </video>
+    <button onclick="showHearts()">Je t’aime</button>
+    <footer>
+        <p>Créé avec amour par Amdiath pour Immaculée. ❤️</p>
+    </footer>
+
+    <script>
+        function showHearts() {
+            const heartCount = 15; // Nombre de cœurs à afficher
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw'; // Position horizontale aléatoire
+                heart.style.animationDelay = Math.random() * 2 + 's'; // Délais aléatoires pour chaque cœur
+                heart.style.backgroundColor = ['#ff6699', '#ff3366', '#ff99cc'][Math.floor(Math.random() * 3)];
+                heart.style.transform = `scale(${Math.random() * 1.5 + 0.5})`; // Taille aléatoire
+                document.body.appendChild(heart);
+
+                // Supprimer le cœur après l'animation
+                heart.addEventListener('animationend', () => {
+                    heart.remove();
+                });
+            }
+
+            // Afficher un message spécial
+            setTimeout(() => {
+                alert('Tu es l’amour de ma vie, Immaculée. ❤️');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
